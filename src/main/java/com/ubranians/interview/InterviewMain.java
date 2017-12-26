@@ -21,7 +21,7 @@ public class InterviewMain {
 
 
     /**
-     * Sorting input array
+     * Sorting input array in the descending order
      */
     public Integer[] task2(Integer[] array) {
         return null;

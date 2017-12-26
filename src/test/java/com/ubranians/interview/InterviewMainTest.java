@@ -25,7 +25,7 @@ public class InterviewMainTest {
     public void task2Test() {
         Integer[] testArray = {5, 3, 4, 108, 42, 23, 1};
         final Integer[] sorted = interviewMain.task2(testArray);
-        assertEquals(Arrays.asList(1, 3, 4, 5, 23, 42, 108), Arrays.asList(sorted));
+        assertEquals(Arrays.asList(108, 42, 23, 5, 4, 3, 1), Arrays.asList(sorted));
     }
 
     @Test
