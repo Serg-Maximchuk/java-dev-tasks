@@ -1,32 +1,61 @@
 package com.ubranians.interview;
 
+import java.util.List;
+
 public class InterviewMain {
 
+    final int magicNumber = 5;
+
     /**
-     * You shouldn't change this method.
-     * Change method {@link #getFoo(int)}.
+     * Make that exception won't invoke.
+     * You shouldn't change the @{@link #magicNumber} and this method.
+     * Only need to change method {@link #getFoo()}.
      */
-    public void task1() {
-        int i = 5;
-        int[] foo = getFoo(i);
-        foo[i] = i;
+    void task1() {
+        int[] foo = getFoo();
+        foo[magicNumber] = magicNumber;
     }
 
     /**
      * Change me
      */
-    private int[] getFoo(int i) {
-        return new int[i];
+    private int[] getFoo() {
+        return new int[magicNumber];
     }
 
+    final int threshold = 42;
 
     /**
-     * Sorting input array in the descending order
+     * Transform input array to the array of {@link IntegerHolder}.
+     * Filter elements where value less of equals {@link #threshold}.
+     * Then sort the result in the ascending order and return List.
      */
-    public Integer[] task2(Integer[] array) {
+    List<IntegerHolder> task2(Integer[] array) {
         return null;
     }
 
+    static class IntegerHolder {
+        final Integer value;
+
+        IntegerHolder(Integer value) {
+            this.value = value;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            IntegerHolder that = (IntegerHolder) o;
+
+            return value.equals(that.value);
+        }
+
+        @Override
+        public int hashCode() {
+            return value.hashCode();
+        }
+    }
 
     final char[] repeatedChars = {' ', '\n', '\t'};
 
@@ -36,7 +65,7 @@ public class InterviewMain {
      * from this repeated selection
      * E.g.: "\n\n\n\n\nTEST\n\n\n\t\t\t\t\t\t" -> "\nTEST\n\t"
      */
-    public String task3(String input) {
+    String task3(String input) {
         return null;
     }
 
@@ -50,7 +79,7 @@ public class InterviewMain {
      * E.g.: (()()) -> true
      * ))(()( -> false
      */
-    public boolean task4(String testString) {
+    boolean task4(String testString) {
         return false;
     }
 

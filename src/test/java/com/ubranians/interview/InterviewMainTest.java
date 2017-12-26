@@ -1,9 +1,11 @@
 package com.ubranians.interview;
 
+import com.ubranians.interview.InterviewMain.IntegerHolder;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -23,9 +25,17 @@ public class InterviewMainTest {
 
     @Test
     public void task2Test() {
-        Integer[] testArray = {5, 3, 4, 108, 42, 23, 1};
-        final Integer[] sorted = interviewMain.task2(testArray);
-        assertEquals(Arrays.asList(108, 42, 23, 5, 4, 3, 1), Arrays.asList(sorted));
+        Integer[] testArray = {5, 109, 3, 49, 88, 4, 108, 29, 42, 23, 1};
+        final List<IntegerHolder> sorted = interviewMain.task2(testArray);
+        assertEquals(Arrays.asList(
+                new IntegerHolder(1),
+                new IntegerHolder(3),
+                new IntegerHolder(4),
+                new IntegerHolder(5),
+                new IntegerHolder(23),
+                new IntegerHolder(29),
+                new IntegerHolder(42)
+        ), sorted);
     }
 
     @Test
