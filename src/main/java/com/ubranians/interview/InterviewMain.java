@@ -54,5 +54,8 @@ public class InterviewMain {
         return false;
     }
 
+    public static void main(String[] args) {
+
+    }
 
 }
