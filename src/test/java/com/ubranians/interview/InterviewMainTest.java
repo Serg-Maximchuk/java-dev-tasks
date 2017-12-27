@@ -48,7 +48,7 @@ public class InterviewMainTest {
         actual = interviewMain.task3("\n\t test \n\t ");
         expected = "\n\t test \n\t ";
         assertEquals(expected, actual);
-        actual = "                        ";
+        actual = interviewMain.task3("                        ");
         expected = " ";
         assertEquals(actual, expected);
     }

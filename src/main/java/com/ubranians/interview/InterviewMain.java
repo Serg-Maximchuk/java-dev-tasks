@@ -34,7 +34,7 @@ public class InterviewMain {
         return null;
     }
 
-    static class IntegerHolder {
+    static class IntegerHolder implements Comparable<IntegerHolder> {
         final Integer value;
 
         IntegerHolder(Integer value) {
@@ -54,6 +54,11 @@ public class InterviewMain {
         @Override
         public int hashCode() {
             return value.hashCode();
+        }
+
+        @Override
+        public int compareTo(IntegerHolder o) {
+            return value - o.value;
         }
     }
 
