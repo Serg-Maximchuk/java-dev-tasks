@@ -8,7 +8,7 @@ public class InterviewMain {
 
     /**
      * Make that exception won't invoke.
-     * You shouldn't change the @{@link #magicNumber} and this method.
+     * You shouldn't change the {@link #magicNumber} and this method.
      * Only need to change method {@link #getFoo()}.
      */
     void task1() {
