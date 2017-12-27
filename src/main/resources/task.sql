@@ -17,8 +17,8 @@ CREATE TABLE product
   FOREIGN KEY (company_id) REFERENCES company (id)
 );
 
-INSERT INTO company (name) VALUES ('imCode');
 INSERT INTO company (name) VALUES ('Ubrainians');
+INSERT INTO company (name) VALUES ('imCode');
 INSERT INTO company (name) VALUES ('JetBrains');
 INSERT INTO company (name) VALUES ('Microsoft');
 
