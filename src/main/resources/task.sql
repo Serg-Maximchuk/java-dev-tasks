@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS interview_test;
 CREATE DATABASE interview_test;
+USE interview_test;
+
 CREATE TABLE company
 (
   id   INT AUTO_INCREMENT PRIMARY KEY,

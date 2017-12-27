@@ -27,7 +27,7 @@ public class InterviewMain {
 
     /**
      * Transform input array to the array of {@link IntegerHolder}.
-     * Filter elements where value less of equals {@link #threshold}.
+     * Filter elements where value less or equals {@link #threshold}.
      * Then sort the result in the ascending order and return List.
      */
     List<IntegerHolder> task2(Integer[] array) {
