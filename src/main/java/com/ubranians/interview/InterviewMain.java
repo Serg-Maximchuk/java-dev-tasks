@@ -7,9 +7,9 @@ public class InterviewMain {
     private final int magicNumber = 5;
 
     /**
-     * Make that exception won't invoke.
+     * Make that exception won't be thrown.
      * You shouldn't change the {@link #magicNumber} and this method.
-     * Only need to change method {@link #getFoo()}.
+     * You only have to change the {@link #getFoo()} method.
      */
     void task1() {
         int[] foo = getFoo();
