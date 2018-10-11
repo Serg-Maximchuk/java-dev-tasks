@@ -27,7 +27,7 @@ public class InterviewMain {
     private final int threshold = 42;
 
     /**
-     * Transform input array to the array of {@link IntegerHolder}.
+     * Transform input array to the collection of {@link IntegerHolder}.
      * Filter elements where value less or equals {@link #threshold}.
      * Then sort the result in the ascending order and return List.
      */
