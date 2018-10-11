@@ -1,5 +1,6 @@
 package com.ubranians.interview;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InterviewMain {
@@ -20,7 +21,7 @@ public class InterviewMain {
      * Change me
      */
     private int[] getFoo() {
-        return new int[magicNumber];
+        return new int[magicNumber+1];
     }
 
 
@@ -32,6 +33,13 @@ public class InterviewMain {
      * Then sort the result in the ascending order and return List.
      */
     List<IntegerHolder> task2(Integer[] array) {
+        List<Integer> list = new ArrayList<>();
+        for (Integer anArray : array) {
+            if (anArray <= threshold) {
+                list.add(anArray);
+            }
+        }
+//        list.sort();
         return null;
     }
 
@@ -71,8 +79,25 @@ public class InterviewMain {
      * E.g.: "\n\n\n\n\nTEST\n\n\n\t\t\t\t\t\t" -> "\nTEST\n\t"
      */
     String task3(String input) {
-        return null;
+        char[] mass = input.toCharArray();
+        char[] masssorted = new char[250];
+        String t = "";
+        masssorted[0] = mass[0];
+        char a = mass[0];
+        for (int i = 1, k = 1; i < mass.length; i++) {
+            if (mass[i] != a) {
+                t += "hnjm,";
+                masssorted[k] = mass[i];
+                k++;
+            }
+            else {
+                a = mass[i];
+            }
+        }
+        t = new String(masssorted);
+        return t;
     }
+
 
 
     private final char openBracket = '(';
@@ -85,6 +110,12 @@ public class InterviewMain {
      * ))(()( -> false
      */
     boolean task4(String testString) {
+        char[] mass = testString.toCharArray();
+        for(int i = 0; i < mass.length; i++) {
+            if(mass[0] == openBracket) {
+
+            }
+        }
         return false;
     }
 
