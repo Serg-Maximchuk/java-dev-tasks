@@ -4,7 +4,7 @@ import java.util.List;
 
 public class InterviewMain {
 
-    final int magicNumber = 5;
+    private final int magicNumber = 5;
 
     /**
      * Make that exception won't invoke.
@@ -23,7 +23,8 @@ public class InterviewMain {
         return new int[magicNumber];
     }
 
-    final int threshold = 42;
+
+    private final int threshold = 42;
 
     /**
      * Transform input array to the array of {@link IntegerHolder}.
@@ -62,12 +63,11 @@ public class InterviewMain {
         }
     }
 
-    final char[] repeatedChars = {' ', '\n', '\t'};
+    private final char[] repeatedChars = {' ', '\n', '\t'};
 
     /**
-     * Replace in the input String
-     * all sequently repeated characters by one character
-     * from this repeated selection
+     * Replace in the input String all sequentially repeated characters by one
+     * character from this repeated selection
      * E.g.: "\n\n\n\n\nTEST\n\n\n\t\t\t\t\t\t" -> "\nTEST\n\t"
      */
     String task3(String input) {
@@ -75,8 +75,8 @@ public class InterviewMain {
     }
 
 
-    final char openBracket = '(',
-            closeBracket = ')';
+    private final char openBracket = '(';
+    private final char closeBracket = ')';
 
     /**
      * Suppose that you have some math expression.

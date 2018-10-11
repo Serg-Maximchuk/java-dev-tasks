@@ -40,14 +40,17 @@ public class InterviewMainTest {
 
     @Test
     public void task3Test() {
-        String actual,
-                expected;
+        String actual;
+        String expected;
+
         actual = interviewMain.task3("\n\n\t\n\n\t\n    test   test \t\t\t\t");
         expected = "\n\t\n\t\n test test \t";
         assertEquals(expected, actual);
+
         actual = interviewMain.task3("\n\t test \n\t ");
         expected = "\n\t test \n\t ";
         assertEquals(expected, actual);
+
         actual = interviewMain.task3("                        ");
         expected = " ";
         assertEquals(actual, expected);
