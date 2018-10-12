@@ -1,5 +1,6 @@
 package com.ubranians.interview;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InterviewMain {
@@ -20,7 +21,7 @@ public class InterviewMain {
      * Change me
      */
     private int[] getFoo() {
-        return new int[magicNumber];
+        return new int[magicNumber+1];
     }
 
 
@@ -32,7 +33,14 @@ public class InterviewMain {
      * Then sort the result in the ascending order and return List.
      */
     List<IntegerHolder> task2(Integer[] array) {
-        return null;
+        List<IntegerHolder> newList = new ArrayList<>();
+        for (Integer i: array) {
+            if (i <= threshold){
+                newList.add(new IntegerHolder(i));
+            }
+        }
+        newList.sort(IntegerHolder::compareTo);
+        return newList;
     }
 
     static class IntegerHolder implements Comparable<IntegerHolder> {
@@ -70,7 +78,7 @@ public class InterviewMain {
      * character from this repeated selection
      * E.g.: "\n\n\n\n\nTEST\n\n\n\t\t\t\t\t\t" -> "\nTEST\n\t"
      */
-    String task3(String input) {
+    String task3(String input) { // skipped
         return null;
     }
 
@@ -85,7 +93,17 @@ public class InterviewMain {
      * ))(()( -> false
      */
     boolean task4(String testString) {
-        return false;
+        int j = 0;
+        for (int i =0; i<testString.length(); i++){
+            if (testString.charAt(i) == openBracket){
+                j++;
+            } else if (testString.charAt(i) == closeBracket){
+                j--;
+            }
+
+            if (j < 0) return false;
+        }
+        return j == 0;
     }
 
     public static void main(String[] args) {
