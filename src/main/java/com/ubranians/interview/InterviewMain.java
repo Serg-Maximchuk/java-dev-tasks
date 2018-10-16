@@ -1,6 +1,10 @@
 package com.ubranians.interview;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class InterviewMain {
 
@@ -20,7 +24,7 @@ public class InterviewMain {
      * Change me
      */
     private int[] getFoo() {
-        return new int[magicNumber];
+        return new int[magicNumber+1];
     }
 
 
@@ -32,6 +36,13 @@ public class InterviewMain {
      * Then sort the result in the ascending order and return List.
      */
     List<IntegerHolder> task2(Integer[] array) {
+        List<IntegerHolder> test = new ArrayList<>();
+        List<Integer> test2 = Arrays.asList(array);
+        for (Integer integer : test2) {
+            test.add(new IntegerHolder(integer));
+        }
+        final List<IntegerHolder> collect = test.stream().filter(e -> e.value >= threshold).collect(Collectors.toList());
+
         return null;
     }
 
@@ -85,6 +96,13 @@ public class InterviewMain {
      * ))(()( -> false
      */
     boolean task4(String testString) {
+        char[] charArray = testString.toCharArray();
+        if (charArray[0] == closeBracket)
+            return false;
+
+        for (char c : charArray) {
+
+        }
         return false;
     }
 
