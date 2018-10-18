@@ -62,6 +62,7 @@ public class InterviewMainTest {
         assertTrue(interviewMain.task4("(((())(())))"));
         assertFalse(interviewMain.task4("))(()("));
         assertFalse(interviewMain.task4("))))(((("));
+        assertFalse(interviewMain.task4("()()())(()()()"));
     }
 
 
