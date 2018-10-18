@@ -1,6 +1,5 @@
 package com.ubranians.interview;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InterviewMain {
@@ -21,7 +20,7 @@ public class InterviewMain {
      * Change me
      */
     private int[] getFoo() {
-        return new int[magicNumber + 1];
+        return new int[magicNumber];
     }
 
 
@@ -33,15 +32,7 @@ public class InterviewMain {
      * Then sort the result in the ascending order and return List.
      */
     List<IntegerHolder> task2(Integer[] array) {
-        List<IntegerHolder> list = new ArrayList<>();
-        for (Integer integer : array) {
-            if ( integer <= threshold){
-                list.add(new IntegerHolder(integer));
-            }
-        }
-        list.sort(IntegerHolder::compareTo);
-
-        return list;
+        return null;
     }
 
     static class IntegerHolder implements Comparable<IntegerHolder> {
@@ -94,21 +85,7 @@ public class InterviewMain {
      * ))(()( -> false
      */
     boolean task4(String testString) {
-        final char[] chars = testString.toCharArray();
-        if (chars[0] == closeBracket || chars[chars.length-1] == openBracket){
-            return false;
-        }
-        int closedB = 0;
-        int openedB = 0;
-        for (char aChar : chars) {
-            if (aChar == openBracket){
-                ++openedB;
-            }
-            else {
-                ++closedB;
-            }
-        }
-        return closedB == openedB;
+        return false;
     }
 
     public static void main(String[] args) {
