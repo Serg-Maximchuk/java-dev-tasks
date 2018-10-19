@@ -1,10 +1,20 @@
 package com.ubranians.interview;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class InterviewMain {
 
     private final int magicNumber = 5;
+    private final int threshold = 42;
+    private final char[] repeatedChars = {' ', '\n', '\t'};
+    private final char openBracket = '(';
+    private final char closeBracket = ')';
+
+    public static void main(String[] args) {
+
+    }
 
     /**
      * Make that exception won't be thrown.
@@ -20,11 +30,8 @@ public class InterviewMain {
      * Change me
      */
     private int[] getFoo() {
-        return new int[magicNumber];
+        return new int[magicNumber + 1];
     }
-
-
-    private final int threshold = 42;
 
     /**
      * Transform input array to the collection of {@link IntegerHolder}.
@@ -32,7 +39,37 @@ public class InterviewMain {
      * Then sort the result in the ascending order and return List.
      */
     List<IntegerHolder> task2(Integer[] array) {
+        return Arrays.stream(array).filter(integer -> integer <= threshold)
+                .map(IntegerHolder::new)
+                .sorted(IntegerHolder::compareTo)
+                .collect(Collectors.toList());
+    }
+
+    /**
+     * Replace in the input String all sequentially repeated characters by one
+     * character from this repeated selection
+     * E.g.: "\n\n\n\n\nTEST\n\n\n\t\t\t\t\t\t" -> "\nTEST\n\t"
+     */
+    String task3(String input) {
         return null;
+    }
+
+    /**
+     * Suppose that you have some math expression.
+     * Test that each {@link #openBracket} has each {@link #closeBracket} in correct way.
+     * E.g.: (()()) -> true
+     * ))(()( -> false
+     * ()())(()() -> false
+     */
+    boolean task4(String testString) {
+        final char[] chars = testString.toCharArray();
+        int i = 0;
+        for (char c : chars) {
+            if (c == openBracket) i++;
+            else i--;
+            if (i < 0) return false;
+        }
+        return true;
     }
 
     static class IntegerHolder implements Comparable<IntegerHolder> {
@@ -61,35 +98,6 @@ public class InterviewMain {
         public int compareTo(IntegerHolder o) {
             return value - o.value;
         }
-    }
-
-    private final char[] repeatedChars = {' ', '\n', '\t'};
-
-    /**
-     * Replace in the input String all sequentially repeated characters by one
-     * character from this repeated selection
-     * E.g.: "\n\n\n\n\nTEST\n\n\n\t\t\t\t\t\t" -> "\nTEST\n\t"
-     */
-    String task3(String input) {
-        return null;
-    }
-
-
-    private final char openBracket = '(';
-    private final char closeBracket = ')';
-
-    /**
-     * Suppose that you have some math expression.
-     * Test that each {@link #openBracket} has each {@link #closeBracket} in correct way.
-     * E.g.: (()()) -> true
-     * ))(()( -> false
-     */
-    boolean task4(String testString) {
-        return false;
-    }
-
-    public static void main(String[] args) {
-
     }
 
 }
